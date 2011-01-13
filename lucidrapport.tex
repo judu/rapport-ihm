@@ -133,7 +133,7 @@
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.5\textwidth]{allocine.png}
-		\caption{Application AlloCiné : liste de films.}
+		\caption{Application AlloCiné: liste de films.}
 		\label{fig:allocine}
 	\end{figure}
 
@@ -148,20 +148,109 @@
 
 	\subsection{Look and feel}
 
+	Une sélection d'écran va ici être présentée afin d'illustrer la charte
+	graphique adoptée, qu'il s'agisse de la disposition des diverses
+	fonctionnalités que des images utilisées.
+
 		\subsubsection{Écran d'accueil}
 
 		\begin{figure}[ht]
 			\centering
-				\includegraphics[width=0.5\textwidth]{accueil.png}
-				\caption{Écran d'accueil de l'application}
-			\label{fig:allocine}
-			\end{figure}
+			\includegraphics[width=0.5\textwidth]{accueil.png}
+			\caption{Écran d'accueil de l'application}
+			\label{fig:accueil}
+		\end{figure}
 
+		Lors du lancement de l'application, nous arrivons sur cet écran présentant
+		succinctement les différentes fonctionnalités de l'application, que l'on
+		retrouve donc en haut de l'écran, à savoir:
 
+		\begin{itemize}
+			\item la recherche de sports par nom;
+			\item la prospection par catégorie;
+			\item la recherche par horaires de disponibilité;
+			\item l'affichage des lieux relatifs aux sports proposés par le SUAPS.
+		\end{itemize}
 
+		\subsubsection{Recherche par nom}
 
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.5\textwidth]{recherche.png}
+			\caption{Recherche par nom}
+			\label{fig:recherche}
+		\end{figure}
 
-	\subsection{Prototypage}
+		Nous avons ici à faire à un simple champ où il s'agit d'entrer le nom du
+		du sport à rechercher.
+
+		\subsubsection{Prospection par catégorie}
+
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.5\textwidth]{categories.png}
+			\caption{Catégories}
+			\label{fig:categories}
+		\end{figure}
+
+		Ici seront listées les différentes catégories proposées par le SUAPS, la
+		sélection d'une catégorie permettant ensuite l'affichage des sports
+		correspondant à la dite catégorie.
+
+		\subsubsection{Recherche par horaires}
+
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.5\textwidth]{horaires.png}
+			\caption{Recherche par disponibilité}
+			\label{fig:horaires}
+		\end{figure}
+
+		Cet écran permet à l'utilisateur de spécifier ses disponibilités afin de
+		voir les sports auquel il peut dès lors participier durant ces périodes.
+
+		Ainsi, la sélection d'un jour ouvrable et de l'intervalle horaire permet
+		d'afficher les sports dispensés durant cette période.
+
+	\subsection{Scénario d'utilisation: prospection d'un sport par lieu}
+
+	Afin d'illustrer l'utilisation de l'application, nous proposons ici une suite
+	d'actions et ses écrans intermédiaires permettant l'accès à un sport (ici le
+	canoë-kayak).
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{lieux.png}
+		\caption{Prospection par lieux}
+		\label{fig:lieux}
+	\end{figure}
+
+	Dans un premier temps, l'écran de prospection par lieux (figure
+	\ref{fig:lieux}) permet l'affichage des lieux où sont proposées des
+	activités du SUAPS.
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{basekayak.png}
+		\caption{Base kayak de l'Université de Nantes}
+		\label{fig:basekayak}
+	\end{figure}
+
+	Ensuite, la sélection d'un des lieux permet l'affichage des informations
+	inhérentes, tel que le montre la figure \ref{fig:basekayak}.
+
+	Notamment est affichée une liste des sports proposés en ce lieu.
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{canoekayak.png}
+		\caption{Canoë-Kayak}
+		\label{fig:canoekayak}
+	\end{figure}
+
+	Enfin, nous arrivons, via sélection d'un des sports au dernier écran, sur un
+	écran présentant succinctement le sport considéré, ainsi que les horaires
+	disponibles (figure \ref{fig:canoekayak}).
 
 \section{Implémentation de l'application}
 
