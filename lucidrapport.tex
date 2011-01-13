@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[french, titlepage, 11pt, a4paper]{article}
 \usepackage{xunicode}
 \usepackage{fontspec}
 \usepackage[frenchb]{babel}
@@ -6,13 +6,13 @@
 \usepackage{listings}
 \usepackage[T1]{fontenc}
 \usepackage{kpfonts}
+\usepackage[usenames,dvipsnames]{color}
 
 
 
-\renewcommand*{\familydefault}{\sfdefault}
+%\renewcommand*{\familydefault}{\sfdefault}
 
 \renewcommand{\nobreakspace}{\nobreak\ }
-
 
 
 \title{SUAPS}
@@ -20,7 +20,31 @@
 
 \begin{document}
 
-\maketitle
+%\maketitle
+\begin{titlepage}
+
+\begin{center}
+    \includegraphics[]{./logofac.png}\\[2cm]
+
+    {\Large Interface Homme Machine}\\[2cm]
+
+    {\Huge SUAPS\textcolor{red}{r} \textcolor{DarkOrchid}{beta}}\\[0.5cm]
+    {\large \emph{Seeds of your success}}
+\end{center}
+
+
+
+\end{titlepage}
+
+
+\fontsize{48}{48}
+\fontspec{TeX Gyre Bonum Bold}
+{\addfontfeature{Color=FF000099}W}\kern-1ex
+{\addfontfeature{Color=0000FF99}S}\kern-0.8ex
+{\addfontfeature{Color=DDBB2299}P}\kern-0.8ex
+{\addfontfeature{Color=00BB3399}R}
+
+
 
 \section{Analyse}
 \label{sec:analyse}
@@ -133,7 +157,7 @@
 			\label{fig:allocine}
 			\end{figure}
 
-			
+
 
 
 
