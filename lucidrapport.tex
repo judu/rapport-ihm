@@ -23,6 +23,7 @@
 \maketitle
 
 \section{Analyse}
+\label{sec:analyse}
 
 	\subsection{Utilisateurs}
 		La population des utilisateurs du point de vue du logiciel est
@@ -84,35 +85,74 @@
 
             L'utilisateur va dans l'onglet \og Horaires\fg{} et entre ses vœux
             en terme de disponibilité. Les sports qui sont disponibles s'affichent.
-	
+
 \section{Conception de l'interface}
 
 	Une fois définie la population des utilisateurs cible, vient la définition et la conception d'une interface efficace. Ici l'efficacité consiste en une solution à même d'offrir les fonctions attendues des utilisateurs dans une interface adaptée à leur connaissance de l'environnement applicatif.
 
 	\subsection{Concept d'interaction}
-	
+
 	En celà, il s'agit ici de parvenir à proposer une solution simple et claire à utiliser, de telle sorte que l'accession aux fonctions clés de l'application soient accessibles rapidement et intuitivement.
-	
+
 	Dès lors, et afin de proposer une interface potentiellement connue de l'utilisateur, nous avons eu pour idée de s'inspirer de l'application AlloCiné pour Android. Notamment l'analogie entre la recherche et l'affichage de films d'un côté, de sports d'un autre, s'est imposée d'elle-même.
-	
+
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.5\textwidth]{allocine.png}
 		\caption{Application AlloCiné : liste de films.}
 		\label{fig:allocine}
 	\end{figure}
-	
+
 	En outre, reprendre ainsi une interface que connaît l'utilisateur offre l'avantage de répondre à ses habitudes, automatisme	et exigences.
-	
+
 	\subsection{Écrans-clés}
-	
-	
-	
+
+
+
 	\subsection{Look and feel}
-	
-	
-	
+
+
+
 	\subsection{Prototypage}
+
+\section{Implémentation de l'application}
+
+    Tout d'abord, l'application ne possède pas toutes les fonctionnalités prévue
+    dans la section \ref{sec:analyse}. Notamment la partie inscription.
+
+
+    La conception de l'application s'est faite en deux phases: création et accès
+    à la base de données, et développement de l'interface.
+
+    \subsection{Base de données}
+
+        Pour le prototype réalisé, nous avons écrit les requêtes créant les
+        tables et les remplissant au démarrage de l'application. Cela évite de
+        devoir mettre un serveur à disposition et à y requêter les informations.
+
+        Pour éviter un long démarrage de l'application, la base de données est
+        remplie la première fois qu'on en a besoin.
+
+        \paragraph{Bilan} N'ayant pas réussi à utiliser la base de donnée pour
+        générer la liste des catégories et des activités, nous avons décidé de
+        nous concentrer sur l'interface, et de faire des exemples en dur.
+
+
+    \subsection{Interface étendue}
+
+        Dans une version de production, il serait intéressant d'externaliser la
+        base de données, et de fournir des services web pour récupérer les
+        informations.
+
+        L'intérêt d'externaliser la base est qu'en cas d'ajout ou de suppression
+        d'informations, il n'y a pas besoin de fournir une nouvelle application.
+        Un autre intérêt est justement de fournir une interface d'administration
+        pour changer les informations relatives aux activités, catégories,
+        lieux\dots
+
+        Une coordination avec le SUAPS permettrait de fournir ces informations
+        sur le site de l'université autant que dans l'application, en les centralisant.
+
 
 
 
