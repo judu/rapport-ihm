@@ -24,9 +24,65 @@
 \section{Analyse}
 
 	\subsection{Utilisateurs}
-		La population des utilisateurs du point de vue du logiciel est sensiblement homogène.
-	
+		La population des utilisateurs du point de vue du logiciel est
+		sensiblement homogène: ce sont des utilisateurs de terminal android.
+		Leur but est de se renseigner sur et de s'inscrire aux sports.
+
+		Aucune connaissance du domaine n'est vraiment requise pour utiliser
+		l'application.
+
 	\subsection{Tâches}
+
+	 Les tâches que l'utilisateur effectuera sont:
+
+	    \paragraph{Parcours des sports}
+
+	        Les sports sont classés par catégorie. Si on connaît le sport
+	        cherché, l'accès à sa fiche se fait donc en 2 ou 3 \og clics\fg{}
+	        maximum.
+
+        \paragraph{Recherche de sport par critères}
+
+            Pour un utilisateur cherchant à faire du sport en fonction de son
+            emploi du temps: il pourra : rechercher par horaires, rechercher par
+            lieu (contrainte géographique).
+
+        \paragraph{Informations pratiques}
+
+            Il est aussi possible de parcourir les lieux et d'en obtenir
+            l'adresse ou le numéro.
+
+        \paragraph{Inscription}
+
+            La possibilité de s'inscrire à un sport peut aussi être proposée: il
+            faut cependant passer par l'authentification inhérente à
+            l'université.
+
+
+    \subsection{Scénarii d'utilisation}
+
+    Étant donné qu'il n'y a qu'une seule classe d'utilisateur, nous ne
+    préciserons pas la classe effectuant chaque scénario.
+
+        \paragraph{Accès à un sport}
+
+            Dans ce cas, l'utilisateur lance l'application, choisit l'onglet
+            Activités, choisit la catégorie voulue, puis sélectionne le sport.
+
+            Il peut ensuite accéder à la fiche du lieu ou se déroule le sport, ou s'inscrire.
+
+        \paragraph{Prospection par lieu}
+
+            Dans ce scénario, l'utilisateur cherche un sport se déroulant dans un
+            certain lieu. Il recherche donc dans la liste les lieux celui qui
+            l'intéresse (on peut utiliser ici la géolocalisation pour avoir le
+            lieu le plus proche). Une fois sur la fiche descriptive d'un lieu,
+            on peut accéder aux sports qui s'y déroulent.
+
+        \paragraph{Recherche par horaire}
+
+            L'utilisateur va dans l'onglet \og Horaires\fg{} et entre ses vœux
+            en terme de disponibilité. Les sports qui sont disponibles s'affichent.
 	
 \section{Conception de l'interface}
 
