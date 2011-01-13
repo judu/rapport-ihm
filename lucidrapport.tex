@@ -8,43 +8,50 @@
 \usepackage{kpfonts}
 \usepackage[usenames,dvipsnames]{color}
 
-
-
-%\renewcommand*{\familydefault}{\sfdefault}
-
 \renewcommand{\nobreakspace}{\nobreak\ }
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %Pour mettre dans la title page
 
-
-\title{SUAPS}
-\author{Clotilde \textsc{Massot} \and Alexandre \textsc{Garnier} \and Chimène Gaby \textsc{Nya Ngaha} \and Julien \textsc{Durillon}}
 
 \begin{document}
 
-%\maketitle
 \begin{titlepage}
 
 \begin{center}
     \includegraphics[]{./logofac.png}\\[2cm]
 
-    {\Large Interface Homme Machine}\\[2cm]
+    {\large Interface Homme Machine}\\[1cm]
+    \HRule{}\\[0.8cm]
+    {\Huge \textsf{SUAPS\textcolor{red}{r}}\textcolor{DarkOrchid}{\up{beta}}}\\[0.1cm]
+    {\large \emph{\og Seeds of your success\fg}}\\[0.4cm]
+    \HRule{}\\[3cm]
 
-    {\Huge SUAPS\textcolor{red}{r} \textcolor{DarkOrchid}{beta}}\\[0.5cm]
-    {\large \emph{Seeds of your success}}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs :}\\[0.2cm]
+\end{flushleft}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+Clotilde \textsc{Massot}\\
+Julien \textsc{Durillon}\\
+Alexandre \textsc{Garnier}\\
+Chimène Gaby \textsc{Nya Ngaha}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
 \end{center}
-
-
-
 \end{titlepage}
 
 
-\fontsize{48}{48}
-\fontspec{TeX Gyre Bonum Bold}
-{\addfontfeature{Color=FF000099}W}\kern-1ex
-{\addfontfeature{Color=0000FF99}S}\kern-0.8ex
-{\addfontfeature{Color=DDBB2299}P}\kern-0.8ex
-{\addfontfeature{Color=00BB3399}R}
-
-
+\tableofcontents\clearpage
 
 \section{Analyse}
 \label{sec:analyse}
