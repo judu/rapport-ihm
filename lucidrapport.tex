@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[french, titlepage, 11pt, a4paper]{article}
 \usepackage{xunicode}
 \usepackage{fontspec}
 \usepackage[frenchb]{babel}
@@ -6,21 +6,52 @@
 \usepackage{listings}
 \usepackage[T1]{fontenc}
 \usepackage{kpfonts}
-
-
-
-\renewcommand*{\familydefault}{\sfdefault}
+\usepackage[usenames,dvipsnames]{color}
 
 \renewcommand{\nobreakspace}{\nobreak\ }
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %Pour mettre dans la title page
 
-
-
-\title{SUAPS}
-\author{Clotilde \textsc{Massot} \and Alexandre \textsc{Garnier} \and Chimène Gaby \textsc{Nya Ngaha} \and Julien \textsc{Durillon}}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+
+\begin{center}
+    \includegraphics[]{./logofac.png}\\[2cm]
+
+    {\large Interface Homme Machine}\\[1cm]
+    \HRule{}\\[0.8cm]
+    {\Huge \textsf{SUAPS\textcolor{red}{r}}\textcolor{DarkOrchid}{\up{beta}}}\\[0.1cm]
+    {\large \emph{\og Seeds of your success\fg}}\\[0.4cm]
+    \HRule{}\\[3cm]
+
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs :}\\[0.2cm]
+\end{flushleft}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+Clotilde \textsc{Massot}\\
+Julien \textsc{Durillon}\\
+Alexandre \textsc{Garnier}\\
+Chimène Gaby \textsc{Nya Ngaha}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+
+\tableofcontents\clearpage
 
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
@@ -58,6 +89,9 @@ Lucid.
 		sensiblement homogène: ce sont des utilisateurs de terminal android.
 		Leur but est de se renseigner sur et de s'inscrire aux sports.
 
+		\emph{A priori}, Les utilisateurs seront uniquement des étudiants ou
+		personnels de l'université de Nantes.
+
 		Aucune connaissance du domaine n'est vraiment requise pour utiliser
 		l'application.
 
@@ -80,7 +114,8 @@ Lucid.
         \paragraph{Informations pratiques}
 
             Il est aussi possible de parcourir les lieux et d'en obtenir
-            l'adresse ou le numéro.
+            l'adresse ou le numéro. Il est aussi possible d'obtenir le nom du
+            professeur, et le niveau auquel est destiné le cours.
 
         \paragraph{Inscription}
 
@@ -94,10 +129,10 @@ Lucid.
     Étant donné qu'il n'y a qu'une seule classe d'utilisateur, nous ne
     préciserons pas la classe effectuant chaque scénario.
 
-        \paragraph{Accès à un sport}
+        \paragraph{Accès à un sport par catégorie}
 
-            Dans ce cas, l'utilisateur lance l'application, choisit l'onglet
-            Activités, choisit la catégorie voulue, puis sélectionne le sport.
+            Dans ce cas, l'utilisateur lance l'application, sélectionne l'onglet
+            Catégories, choisit la catégorie voulue, puis sélectionne le sport.
 
             Il peut ensuite accéder à la fiche du lieu ou se déroule le sport, ou s'inscrire.
 
@@ -131,12 +166,12 @@ l'environnement applicatif.
 	Dès lors, et afin de proposer une interface potentiellement connue de
 	l'utilisateur, nous avons eu pour idée de s'inspirer de l'application AlloCiné
 	pour Android.
-	Notamment l'analogie entre la recherche et l'affichage de films d'un côté, de
+	Notamment l'analogie entre la recherche et l'affichage de films d'un côté (fig. \ref{fig:allocine}), de
 	sports d'un autre, s'est imposée d'elle-même.
 
-	\begin{figure}[ht]
+	\begin{figure}[htb]
 		\centering
-		\includegraphics[width=0.5\textwidth]{allocine.png}
+		\includegraphics[width=0.4\textwidth]{allocine.png}
 		\caption{Application AlloCiné: liste de films.}
 		\label{fig:allocine}
 	\end{figure}
@@ -158,14 +193,14 @@ l'environnement applicatif.
 
 		\subsubsection{Écran d'accueil}
 
-		\begin{figure}[ht]
+		\begin{figure}[htb]
 			\centering
-			\includegraphics[width=0.5\textwidth]{accueil.png}
+			\includegraphics[width=0.4\textwidth]{accueil.png}
 			\caption{Écran d'accueil de l'application}
 			\label{fig:accueil}
 		\end{figure}
 
-		Lors du lancement de l'application, nous arrivons sur cet écran présentant
+		Lors du lancement de l'application, nous arrivons sur cet écran (fig. \ref{fig:accueil}) présentant
 		succinctement les différentes fonctionnalités de l'application, que l'on
 		retrouve donc en haut de l'écran, à savoir:
 
@@ -176,45 +211,60 @@ l'environnement applicatif.
 			\item l'affichage des lieux relatifs aux sports proposés par le SUAPS.
 		\end{itemize}
 
+		L'écran d'accueil propose aussi les dernières actualités du SUAPS.
+
 		\subsubsection{Recherche par nom}
 
-		\begin{figure}[ht]
+		\begin{figure}[htb]
 			\centering
-			\includegraphics[width=0.5\textwidth]{recherche.png}
+			\includegraphics[width=0.4\textwidth]{recherche.png}
 			\caption{Recherche par nom}
 			\label{fig:recherche}
 		\end{figure}
 
-		Nous avons ici à faire à un simple champ où il s'agit d'entrer le nom du
+		Nous avons ici (fig. \ref{fig:recherche}) affaire à un simple champ où il s'agit d'entrer le nom du
 		du sport à rechercher.
 
 		\subsubsection{Prospection par catégorie}
 
-		\begin{figure}[ht]
+		\begin{figure}[htb]
 			\centering
-			\includegraphics[width=0.5\textwidth]{categories.png}
+			\includegraphics[width=0.4\textwidth]{categories.png}
 			\caption{Catégories}
 			\label{fig:categories}
 		\end{figure}
 
-		Ici seront listées les différentes catégories proposées par le SUAPS, la
+		Ici (fig. \ref{fig:categories}) seront listées les différentes catégories proposées par le SUAPS, la
 		sélection d'une catégorie permettant ensuite l'affichage des sports
 		correspondant à la dite catégorie.
 
 		\subsubsection{Recherche par horaires}
 
-		\begin{figure}[ht]
+		\begin{figure}[htb]
 			\centering
-			\includegraphics[width=0.5\textwidth]{horaires.png}
+			\includegraphics[width=0.4\textwidth]{horaires.png}
 			\caption{Recherche par disponibilité}
 			\label{fig:horaires}
 		\end{figure}
 
-		Cet écran permet à l'utilisateur de spécifier ses disponibilités afin de
+		Cet écran (fig.\ref{fig:horaires}) permet à l'utilisateur de spécifier ses disponibilités afin de
 		voir les sports auquel il peut dès lors participier durant ces périodes.
 
 		Ainsi, la sélection d'un jour ouvrable et de l'intervalle horaire permet
 		d'afficher les sports dispensés durant cette période.
+
+		\subsubsection{Menu}
+
+		    \begin{figure}[htb]
+		        \centering
+		        \includegraphics[width=0.4\textwidth]{menu.png}
+		        \caption{Menu de l'application}
+		        \label{fig:menu}
+		    \end{figure}
+
+		    Dans toute l'application, un menu (fig. \ref{fig:menu}) est accessible avec la touche \og
+		    menu\fg{}. Ce menu propose des informations sur l'application en
+		    elle-même, et de s'inscrire à un sport.
 
 	\subsection{Scénario d'utilisation: prospection d'un sport par lieu}
 
@@ -222,9 +272,9 @@ l'environnement applicatif.
 	d'actions et ses écrans intermédiaires permettant l'accès à un sport (ici le
 	canoë-kayak).
 
-	\begin{figure}[ht]
+	\begin{figure}[htb]
 		\centering
-		\includegraphics[width=0.5\textwidth]{lieux.png}
+		\includegraphics[width=0.4\textwidth]{lieux.png}
 		\caption{Prospection par lieux}
 		\label{fig:lieux}
 	\end{figure}
@@ -233,9 +283,9 @@ l'environnement applicatif.
 	\ref{fig:lieux}) permet l'affichage des lieux où sont proposées des
 	activités du SUAPS.
 
-	\begin{figure}[ht]
+	\begin{figure}[htb]
 		\centering
-		\includegraphics[width=0.5\textwidth]{basekayak.png}
+		\includegraphics[width=0.4\textwidth]{basekayak.png}
 		\caption{Base kayak de l'Université de Nantes}
 		\label{fig:basekayak}
 	\end{figure}
@@ -245,9 +295,9 @@ l'environnement applicatif.
 
 	Notamment est affichée une liste des sports proposés en ce lieu.
 
-	\begin{figure}[ht]
+	\begin{figure}[htb]
 		\centering
-		\includegraphics[width=0.5\textwidth]{canoekayak.png}
+		\includegraphics[width=0.4\textwidth]{canoekayak.png}
 		\caption{Canoë-Kayak}
 		\label{fig:canoekayak}
 	\end{figure}
@@ -255,6 +305,8 @@ l'environnement applicatif.
 	Enfin, nous arrivons, via sélection d'un des sports au dernier écran, sur un
 	écran présentant succinctement le sport considéré, ainsi que les horaires
 	disponibles (figure \ref{fig:canoekayak}).
+
+
 
 \section{Implémentation de l'application}
 
